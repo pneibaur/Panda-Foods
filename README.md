@@ -2,6 +2,8 @@
 
 <p>This project is in development, and more will be added soon!</p>
 
+<p>PENN stack: PostgreSQL, Express Server, Node.js, Next.js frontend.</p>
+
 <h2>ERD Planning</h2>
 <img src="planning/ERD.png" alt="ERD" />
 
