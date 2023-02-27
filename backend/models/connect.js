@@ -1,15 +1,21 @@
 const mysql = require("mysql")
+require("dotenv").config()
+const USER = process.env.USER
+const PASSWORD = process.env.PASSWORD
+const DB = process.env.DB
+
+
 
 const connection = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "password",
-    database: "mydatabase"
+    user: USER,
+    password: PASSWORD,
+    database: DB
 })
 
 connection.connect((error) => {
     if(error){
-        console.error("MySQL connection error: " + error.stack)
+        console.error("MySQL connection error: " + error.message)
         return
     }
     console.log("Connected to MySQL as id: ", connection.threadId)
